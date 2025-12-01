@@ -3,8 +3,8 @@ services:
     name: student-university-chat-app
     env: python
     region: oregon
-    buildCommand: "cd ALL && pip install -r requirements.txt && cd app && python ../populate_data.py"
-    startCommand: "cd ALL && gunicorn --chdir app server:app --bind 0.0.0.0:$PORT"
+    buildCommand: "pip install -r requirements.txt && cd app && python ../populate_data.py"
+    startCommand: "gunicorn --chdir app server:app --bind 0.0.0.0:$PORT"
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
