@@ -9,8 +9,11 @@ app_dir = os.path.join(script_dir, 'app')
 sys.path.append(app_dir)
 os.chdir(app_dir)
 
-from database import insert_result
+from database import insert_result, init_database
 import random
+
+# Initialize database first
+init_database()
 
 # Student data with ID and Name
 students = [
