@@ -2,6 +2,12 @@
 
 A web-based client-server chat application where clients can interact with the server to manage student results and search for university information. The application features a real-time chat interface and a SQLite database to store and retrieve result records.
 
+## 🌐 Live Demo
+
+**🚀 Try it now:** [https://socket-programming-client-server-chatting.onrender.com/](https://socket-programming-client-server-chatting.onrender.com/)
+
+> **Note:** The free tier may take 30-60 seconds to wake up after inactivity.
+
 ## 📋 Features
 
 - **Chat-based Interface**: Natural language commands to interact with the database
@@ -234,6 +240,19 @@ Edit `static/style.css` gradient colors:
 background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 ```
 
+## 🌐 Deployment
+
+This application is deployed on Render.com and automatically deploys from the `main` branch.
+
+**Live URL:** [https://socket-programming-client-server-chatting.onrender.com/](https://socket-programming-client-server-chatting.onrender.com/)
+
+### Deploy Your Own
+1. Fork this repository
+2. Sign up at [Render.com](https://render.com)
+3. Create a new Web Service
+4. Connect your GitHub repository
+5. Render will auto-detect the configuration from `render.yaml`
+
 ## 📝 License
 
 This project is open source and available for educational purposes.
@@ -241,6 +260,8 @@ This project is open source and available for educational purposes.
 ## 👨‍💻 Author
 
 Created as a client-server chat application for result management.
+
+**GitHub Repository:** [Socket_Programming_Client_Server_Chatting](https://github.com/safiullah-foragy/Socket_Programming_Client_Server_Chatting)
 
 ---
 
