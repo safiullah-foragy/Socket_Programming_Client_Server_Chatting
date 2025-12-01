@@ -1,5 +1,14 @@
 import sys
-sys.path.append('app')
+import os
+
+# Get the directory where this script is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
+app_dir = os.path.join(script_dir, 'app')
+
+# Add app directory to path and change to app directory
+sys.path.append(app_dir)
+os.chdir(app_dir)
+
 from database import insert_result
 import random
 
