@@ -32,7 +32,11 @@ def parse_chat_message(message):
     elif message.startswith('search') or message.startswith('find'):
         query = message.split(maxsplit=1)[1] if len(message.split()) > 1 else None
         if query:
-            return {'action': 'search', 'data': {'query': query}}
+            # Check if query is a pure number (database ID)
+            if query.isdigit():
+                return {'action': 'get_id', 'data': {'id': int(query)}}
+            else:
+                return {'action': 'search', 'data': {'query': query}}
     
     # Get by ID: "get 5" or "show 5"
     elif message.startswith('get') or message.startswith('show'):
@@ -166,9 +170,10 @@ def chat():
 • Add Result:
   add result: name=John Doe, result=95%, college=MIT, board=CBSE
   
-• Search by Name or Student ID:
-  search John
-  search 2102002
+• Search by Name or ID:
+  search John          (searches by name)
+  search 2102002       (searches by name/student ID)
+  search 86            (searches by database ID)
   find MEHEDI
   
 • Get by Database ID:
